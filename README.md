@@ -1,8 +1,6 @@
-# Receipts.US
+# Pollitically Correct
 
-Currently a work in progress for the Springboard Software Engineering Intensive. 
-
-Receipts.US will be a data visualization app that will be able to search for political candidates that have run for office over time, and then be able to display the contributions that have been made to their camaigns by various individuals or organizations. 
+Politically Correct is a data visualization app that will be able to search for political candidates that have run for office over time, and then be able to display the contributions that have been made to their camaigns by various individuals or organizations. 
 
 This app will use React.js for the front-end and Node.js and Express.js for the back end. The data is sourced from the OpenFEC API provided by the American Federal Election Commission. 
 
@@ -70,3 +68,7 @@ Create React App automatically creates a boilerplate react application with depe
 ##### Redis
 
 Caching with redis is used to both cut down on load times and reduce API calls. Due to the slowly updating nature of the data (election cycles are at minimum two years long), all data in the cache has an expiration time of two hours.
+
+##### D3.js
+
+D3 was chosen to represent the contributor occupation data due to range of capabilities and ease of implementation.
