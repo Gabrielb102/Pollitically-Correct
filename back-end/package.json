@@ -11,7 +11,8 @@
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
     "redis": "^4.5.1",
-    "sequelize": "^5.22.3",
+    "sequelize": "^5.22.5",
+    "sequelize-cli": "^6.5.2",
     "supertest": "^6.3.1"
   }
 }
