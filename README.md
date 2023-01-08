@@ -13,11 +13,29 @@ I've decided to create the back-end portion first because that will determine wh
 After that, I will design the front-end of the application that will utilize all of the back-end functionality. 
 
 Starting with 
-- database schema
 - setting up the database
 - registering a user
 - logging in and out
 - the api interaction object
+
+While setting up the front-end, I used Create React App (CRA) to quickly set up a react page, and focused on the following objectives in order.
+
+- Creating a router for same-page operation
+- Creating a class with which to communicate with the back-end, with methods for user actions, and calling the API and delivering the data to the front-end
+- After this I wrote the search page and the results list display
+- The candidate page
+- The financial overview, top ten contributors, top contribution amounts, and the representation of the contributors by occupation as a chart.
+
+After the main functionality was put in place, I focused on adding features.
+
+- Favoriting 
+- Representing data with a graphing library
+- Caching
+
+With all the features done, there were just some rough corners to polish.
+
+- Adding flashes for incorrect username/password and not being signed in when trying to favorite.
+- Fixing some React rerendering timing
 
 ### TECHNOLOGIES and JUSTIFICATION
 
@@ -48,3 +66,7 @@ React is front-end development framework that allows the app to be organized int
 ##### Create React App:
 
 Create React App automatically creates a boilerplate react application with dependencies included. The app is only configurable after the React App is created however this was considered a more efficient use of time than the time it would take to create the app from scratch. 
+
+##### Redis
+
+Caching with redis is used to both cut down on load times and reduce API calls. Due to the slowly updating nature of the data (election cycles are at minimum two years long), all data in the cache has an expiration time of two hours.
