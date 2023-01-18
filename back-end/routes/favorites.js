@@ -2,6 +2,7 @@ const express = require("express");
 const Favorite = require("../models/favorite");
 const router = new express.Router();
 
+// marks a new favorite
 router.post("/", async (req, res, next) => {
     try {
       const { username, candidateId, year, candidateName, candidateOffice } = req.body;
@@ -12,6 +13,7 @@ router.post("/", async (req, res, next) => {
     }
 });
 
+// gets all favorites
 router.get("/", async (req, res, next) => {
     try {
       const { username } = req.query;

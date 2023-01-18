@@ -4,6 +4,13 @@ Politically Correct is a data visualization app that will be able to search for 
 
 This app will use React.js for the front-end and Node.js and Express.js for the back end. The data is sourced from the OpenFEC API provided by the American Federal Election Commission. 
 
+To Start:
+
+1. In one terminal window, go to the project directory, and type "redis-server". This command will start redis, and have it ready for caching.
+2. Open and start postgreSQL. If this is the first time the project is being started, then open a terminal window, enter postgreSQL, and create a database named "receiptsus", then exit postgreSQL and type "psql < receipts.sql" to seed the database.
+3. In another terminal window, go to the project directory, then to "back-end", and type "npm start". This will start the server.
+4. Open a last terminal window, and go to the front-end directory in the project directory, and type "npm start". This will launch the front end interface.
+
 ### APPROACH
 
 I've decided to create the back-end portion first because that will determine which data I will require the front end to handle and deliver to the back-end. 
@@ -34,6 +41,12 @@ With all the features done, there were just some rough corners to polish.
 
 - Adding flashes for incorrect username/password and not being signed in when trying to favorite.
 - Fixing some React rerendering timing
+
+There were issues with testing that were only overcome while finishing the project.
+
+While writing tests for the back-end, I ran into an issue where right on the "describe" function, a TypeError would be thrown reading: "Cannot read properties of undefined (reading 'QueryInterface')". After checking various forums, the most helpful of which is on github.com (https://github.com/sequelize/sequelize-typescript/issues/805), it was apparent that sequelize was the issue, and downgrading to version 5.21.10 was the solution. When attempting the solution however, there was no change, and no other solutions or workarounds made any difference. 
+
+The issue was overcome by deleting a line that was written automatically by VS Code which defined describe as the model which was being called by the routes in the tests.
 
 ### TECHNOLOGIES and JUSTIFICATION
 

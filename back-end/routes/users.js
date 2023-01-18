@@ -3,7 +3,7 @@ const User = require("../models/user");
 const router = new express.Router();
 const jwt = require("jsonwebtoken");
 const { SECRET_KEY } = require("../config");
-const { UnauthorizedError } = require("../expressError");
+const { UnauthorizedError, BadRequestError } = require("../expressError");
 
 // Returns all users
 router.get("/", async (req, res, next) => {

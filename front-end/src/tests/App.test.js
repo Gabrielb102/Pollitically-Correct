@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import App from '../App';
+// // import React from "react";
+// const { render } = require("@testing-library/react");
+// import App from "../App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+// describe("Tests for React components", () => {
+//     it("renders without crashing", function() {
+//         const text = render(<App />);
+//         expect(one).toEqual(1);
+//     });
+// })

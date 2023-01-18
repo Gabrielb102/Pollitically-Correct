@@ -48,14 +48,14 @@ User.get = async (username) => {
 // Register a new user and save to the database
 User.register = async (data) => {
     const hashedPw = await bcrypt.hash(data.password, BCRYPT_SALT_ROUNDS)
-    console.log('data: ', data);
-    const newUser = await User.create({
+    const newUserData = {
         username: data.username, 
         password: hashedPw, 
         email: data.email, 
         first_name: data.firstName, 
         last_name: data.lastName
-    });
+    };
+    const newUser = await User.create(newUserData);
     const userRegistered = newUser.dataValues;
     delete userRegistered.password;
     return userRegistered;

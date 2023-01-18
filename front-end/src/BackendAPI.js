@@ -1,6 +1,4 @@
 import axios from "axios";
-import jwt_decode from "jwt-decode";
-import ResultsList from "./ResultsList";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
 

@@ -11,6 +11,4 @@ async function verifyDBOperational() {
       }
 }
 
-verifyDBOperational();
-
 module.exports = db;
