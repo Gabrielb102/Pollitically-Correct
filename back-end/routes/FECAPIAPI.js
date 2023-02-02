@@ -4,11 +4,12 @@ const { createClient } = require("redis");
 const router = new express.Router();
 const { SECRET_KEY, API_KEY } = require("../config");
 const axios = require("axios");
+const { REDIS_URI } = require("../config");
 
 // Caching allows for loading times to be cut short by holding the information in server memory
 // The experation time is set relatively long due to the slow changing nature of the data
 
-const client = createClient();
+const client = createClient(REDIS_URI);
 client.on('error', (err) => console.log('Redis Client Error', err));
 client.connect();
 

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3001";
+const BASE_URL = "Pcbackend-env.eba-tfmw33aq.us-west-1.elasticbeanstalk.com";
 
 class DBFrontendAPI {
 
@@ -8,6 +8,7 @@ class DBFrontendAPI {
         console.debug('API Call:', endpoint, data, method);
 
         const url = `${BASE_URL}/${endpoint}`;
+        console.log('url: ', url);
         const params = (method === "get") ? data : {};
         try {
             return (await axios({ url, data, params, method })).data;

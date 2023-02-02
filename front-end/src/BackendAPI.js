@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
+const BASE_URL = process.env.REACT_APP_BASE_URL || "Pcbackend-env.eba-tfmw33aq.us-west-1.elasticbeanstalk.com";
 
 class BackendAPI {
     // the token for interactive with the API will be stored here.
