@@ -10,6 +10,7 @@ const { REDIS_URI } = require("../config");
 // The experation time is set relatively long due to the slow changing nature of the data
 
 const client = createClient(REDIS_URI);
+console.log("////////////REDIS_URI: ", REDIS_URI);
 client.on('error', (err) => console.log('Redis Client Error', err));
 client.connect();
 
