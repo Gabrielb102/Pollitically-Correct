@@ -1,6 +1,6 @@
 
 const SECRET_KEY = "UtterFrustration";
-const PORT = 3001;
+const PORT = process.env.PORT_ENV ? process.env.PORT_ENV : 3001;
 const BCRYPT_SALT_ROUNDS = 10;
 const API_KEY = "rkqWOfeqjuCrYVDy0ASrs9nQj0vLcHfmOcaIQIq6";
 const REDIS_URI = process.env.REDIS_ENV ? process.env.REDIS_ENV : '';
