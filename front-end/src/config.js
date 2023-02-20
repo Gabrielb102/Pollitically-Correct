@@ -1,3 +1,3 @@
-const API_URL = "https://pcapi-env.eba-rfcunpnk.us-west-1.elasticbeanstalk.com:3001";
+const API_URL = "https://gburgos.us-west-1.elasticbeanstalk.com/";
 
 export default API_URL;
