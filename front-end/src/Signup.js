@@ -40,7 +40,7 @@ const Signup = ({setUser}) => {
                 <label htmlFor="username">Username: </label>
                 <input id="username" name="username"/>
                 <label htmlFor="password">Password: </label>
-                <input id="password" name="password"/>
+                <input type="password" id="password" name="password"/>
                 <button onClick={handleSubmit}>Sign Up</button>
             </form>
         </div>
